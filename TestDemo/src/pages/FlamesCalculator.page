@@ -1,0 +1,39 @@
+<apex:page controller="FlamesCalculator" showHeader="false" >
+<style>
+.apexp .pbHeader, .apexp .pbBody { 
+         
+                height: 300px;
+                background-color : #94F8F2 !important; 
+                background-image: url("{!$Resource.bodyimage}") !important;
+          
+            }
+.outputlabels{
+color:White;
+font-weight: bold;
+font-size: 20px;
+}
+.image{
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #b0e0e6;
+}
+</style>
+<apex:image value="{!$Resource.headerimage1}" width="100%" height="10%"/>
+<!--background-image: url("{!$Resource.background}") !important;-->
+<apex:form >
+<apex:pageBlock >
+<apex:outputLabel value="{!$Label.Label_1}" styleClass="outputlabels"/>
+<apex:inputText value="{!firstName}"/>
+<apex:outputLabel value="{!$Label.Label_2}" styleClass="outputlabels"/>
+<apex:inputText value="{!secondName}"/>
+<apex:commandButton action="{!details}"  value="Know your relation">
+</apex:commandButton>
+<br/>
+<apex:outputpanel rendered="{!display}" id="p2" >
+<apex:outputText value="Relation between {!firstName} and {!secondName} is {!flameValue}" styleClass="outputlabels"/><br/>
+<apex:image value="{!$Resource[flameValue]}" width="200" height="200" styleClass="image"/>
+</apex:outputPanel>
+</apex:pageBlock>
+</apex:form>
+<apex:include pageName="liveagent"/>
+</apex:page>

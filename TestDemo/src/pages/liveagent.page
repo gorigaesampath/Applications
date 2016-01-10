@@ -1,0 +1,28 @@
+<apex:page >
+<style>
+p{
+font-size :15px;
+color : blue;
+}
+
+</style>
+<div style="position:relative;left:15px;"> 
+<p>Want to have a live chat with developer? click below</p>
+<img id="liveagent_button_online_57328000000KywG" style="display: none; border: 0px none; cursor: pointer" onclick="liveagent.startChat('57328000000KywG')" src="https://nmhs-developer-edition.ap2.force.com/nmhs/resource/1429682112000/online" />
+<img id="liveagent_button_offline_57328000000KywG" style="display: none; border: 0px none; " src="https://nmhs-developer-edition.ap2.force.com/nmhs/resource/1429682130000/offline" />
+<script type="text/javascript">
+if (!window._laq) { window._laq = []; }
+window._laq.push(function(){liveagent.showWhenOnline('57328000000KywG', document.getElementById('liveagent_button_online_57328000000KywG'));
+liveagent.showWhenOffline('57328000000KywG', document.getElementById('liveagent_button_offline_57328000000KywG'));
+});</script>
+
+
+
+
+
+<script type='text/javascript' src='https://c.la10.salesforceliveagent.com/content/g/js/33.0/deployment.js'></script>
+<script type='text/javascript'>
+liveagent.init('https://d.la10.salesforceliveagent.com/chat', '57228000000GmmL', '00D28000000K2xy');
+</script>
+</div>
+</apex:page>

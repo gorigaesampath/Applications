@@ -1,0 +1,23 @@
+<apex:page controller="contactwebservice">
+<apex:form >
+<apex:pageBlock title="Create Contact">
+<apex:pageBlockButtons >
+<apex:commandButton action="{!createContact}" value="Save Contact"/>
+</apex:pageBlockButtons>
+<apex:pageBlockSection >
+<apex:pageBlockSectionItem >
+First Name:
+<apex:inputField value="{!sampleContact.firstName}" required="true"/>
+</apex:pageBlockSectionItem>
+<apex:pageBlockSectionItem >
+Last Name :
+<apex:inputField value="{!sampleContact.lastName}"/>
+</apex:pageBlockSectionItem>
+<apex:pageBlockSectionItem >
+Email :
+<apex:inputField value="{!sampleContact.Email}"/>
+</apex:pageBlockSectionItem>
+</apex:pageBlockSection>
+</apex:pageBlock>
+</apex:form>
+</apex:page>
